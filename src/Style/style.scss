@@ -1,0 +1,147 @@
+main{
+    margin:0;
+    padding:0;
+    height:100%;
+   // background-image: url(../asssts/sydeny.jpg);
+   
+}
+
+    .weather-card{
+        width:70%;
+        height:600px;
+        display: flex;
+        flex-wrap: wrap; /* Optional. only if you want the items to wrap */
+        display: block;
+        margin-left: auto;//居中！！
+        margin-right: auto;
+        margin-top: 100px;
+        border-radius: 10px;
+        border-color: black;
+        box-shadow: 5px 10px 10px 5px #888888;;
+        .weather-card_header{
+            background-image: url('../asssts/weather4.jpg');
+            background-repeat: no-repeat;
+            background-size:cover;
+            width: 100%;
+            border-radius: 8px 8px 0px 0px;
+            height:300px;
+            position: relative;
+            .weather-card_temperature{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: white;
+                font-size: 100px;
+                transform: scale(.8, 1);
+                opacity: 1;
+                letter-spacing: 10px;
+                position: absolute;
+                left:100px;
+                top:30px
+            }
+            .weather-card_visibility{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: white;
+                transform: scale(.8, 1);
+                opacity: 1;
+                letter-spacing: 5px;
+                position: absolute;
+                left:100px;
+                top:140px
+            }
+            .weather-card_humidity{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: white;
+                transform: scale(.8, 1);
+                opacity: 1;
+                letter-spacing: 2px;
+                position: absolute;
+                left:22px;
+                font-size: 20px;
+                top: 210px;
+            }
+            .weather-card_humidity_percent{
+                @extend.weather-card_humidity;
+                top:240px;
+                left:50px;
+            }
+            .weather-card_wind{
+                @extend.weather-card_humidity;
+                left:240px;
+            }
+            .weather-card_wind_speed{
+                @extend.weather-card_humidity_percent;
+                left:232px
+            }
+            .weather-card_city{
+                @extend.weather-card_temperature;
+                letter-spacing: 3px;
+                font-size: 50px;
+                left:285px;
+            }
+            
+            hr{
+                position:absolute;
+                border-bottom: 6px solid #8c8b8b;
+                width:70px;
+                right:120px;
+                top:78px
+            }
+            .vl{
+                border-left: 2px solid white;
+                height: 60px;
+                position: absolute;
+                left:165px;
+                top: 205px;
+            }
+    }
+    
+    .weather-card_body{
+        
+        margin: 30px;
+        .weather-icons{
+            height: 80px;
+            width: 100px;
+        }
+        .weather-icons_sun{
+            @extend.weather-icons;
+            padding-right: 25px;
+            
+        }
+        .weather-icons_shower{
+            @extend.weather-icons;
+            padding-right: 15px;
+        }
+        .weather-card_weekday1{
+            //padding-left:170px;
+            //padding-top: 50px;
+            //padding-left:160px;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: black;
+        }
+        .weather-card_weekday2{
+            @extend .weather-card_weekday1;
+            //padding:35px;
+            
+        }
+        .weather-card_weekday3{
+            @extend .weather-card_weekday1;
+            
+        }
+        .weather-card_weekday4{
+            @extend .weather-card_weekday1;
+        }
+        .weather-card_weekday5{
+            @extend .weather-card_weekday1;
+            
+        }
+    }
+
+
+}
+
+
+  
+    
+  
+  
